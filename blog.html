@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog de IA para Entrenamiento Deportivo - Análisis de rendimiento en tiempo real y retroalimentación instantánea de técnica. Mejora tu técnica más rápido, gana más juegos y entrena de manera inteligente.">
+    <meta name="keywords" content="IA deportiva, entrenamiento deportivo, análisis de rendimiento, retroalimentación de técnica, blog deportivo">
+    <meta name="author" content="AI Sports Coaching">
+    <meta property="og:title" content="Blog - IA Para Entrenamiento Deportivo">
+    <meta property="og:description" content="Descubre artículos y consejos sobre cómo la inteligencia artificial revoluciona el entrenamiento deportivo moderno.">
+    <meta property="og:type" content="website">
+    <title>Blog - IA Para Entrenamiento Deportivo | Análisis de Rendimiento en Tiempo Real</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        .text-primary {
+            color: #FF5A5F;
+        }
+        
+        .bg-primary {
+            background-color: #FF5A5F;
+        }
+        
+        .text-secondary {
+            color: #1A1A1A;
+        }
+        
+        .bg-secondary {
+            background-color: #1A1A1A;
+        }
+        
+        .text-accent {
+            color: #FFD166;
+        }
+        
+        .bg-accent {
+            background-color: #FFD166;
+        }
+        
+        .hover-lift {
+            transition: all 0.3s ease-out;
+        }
+        
+        .hover-lift:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 40px rgba(255, 90, 95, 0.15);
+        }
+        
+        .btn-primary {
+            background-color: #FF5A5F;
+            color: white;
+            border-radius: 9999px;
+            padding: 0.75rem 2rem;
+            font-weight: 600;
+            transition: all 0.3s ease-out;
+            display: inline-block;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+        }
+        
+        .btn-primary:hover {
+            background-color: #E74C51;
+            transform: scale(1.05);
+            box-shadow: 0 10px 40px rgba(255, 90, 95, 0.25);
+        }
+        
+        .btn-secondary {
+            background-color: #FFD166;
+            color: #1A1A1A;
+            border-radius: 9999px;
+            padding: 0.75rem 2rem;
+            font-weight: 600;
+            transition: all 0.3s ease-out;
+            display: inline-block;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+        }
+        
+        .btn-secondary:hover {
+            background-color: #F5C847;
+            transform: scale(1.05);
+            box-shadow: 0 10px 40px rgba(255, 209, 102, 0.25);
+        }
+        
+        .card-rounded {
+            border-radius: 1rem;
+        }
+        
+        .card-soft {
+            border-radius: 1rem;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease-out;
+        }
+        
+        .card-soft:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+        }
+        
+        .faq-question {
+            cursor: pointer;
+            transition: all 0.3s ease-out;
+        }
+        
+        .faq-question:hover {
+            color: #FF5A5F;
+        }
+        
+        .faq-icon {
+            transition: transform 0.3s ease-out;
+        }
+        
+        .faq-answer {
+            transition: all 0.3s ease-out;
+            max-height: 500px;
+        }
+        
+        .faq-answer.hidden {
+            max-height: 0;
+            overflow: hidden;
+        }
+        
+        .gradient-hero {
+            background: linear-gradient(135deg, rgba(255, 90, 95, 0.1) 0%, rgba(255, 209, 102, 0.1) 100%);
+        }
+        
+        .testimonial-star {
+            color: #FFD166;
+        }
+        
+        .mobile-menu {
+            transition: all 0.3s ease-out;
+        }
+        
+        .header-sticky {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-white text-secondary">
+    <!-- Header -->
+    <header class="header-sticky">
+        <nav class="container mx-auto px-8 md:px-16 py-6 flex items-center justify-between max-w-7xl">
+            <!-- Logo -->
+            <a href="https://test-acc-12349.github.io/ai-for-sports-coaching-2025-11-17-m3o0u" class="flex items-center gap-3 hover:opacity-80 transition-opacity duration-300">
+                <div class="bg-primary rounded-full p-2">
+                    <i data-lucide="zap" class="w-6 h-6 text-white"></i>
+                </div>
+                <span class="text-2xl font-bold text-secondary">SportsIA</span>
+            </a>
+
+            <!-- Back Link -->
+            <a href="https://test-acc-12349.github.io/ai-for-sports-coaching-2025-11-17-m3o0u" class="text-secondary font-medium hover:text-primary transition-colors duration-300">
+                ← Back
+            </a>
+        </nav>
+    </header>
+
+    <!-- Blog Header Section -->
+    <section class="gradient-hero py-20 md:py-32">
+        <div class="container mx-auto px-8 md:px-16 max-w-7xl">
+            <div class="flex flex-col items-center text-center gap-6">
+                <div class="inline-block bg-accent bg-opacity-20 rounded-full px-6 py-2">
+                    <span class="text-primary font-semibold text-sm tracking-wide">RECURSOS Y CONOCIMIENTO</span>
+                </div>
+                
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-secondary leading-tight tracking-tight">
+                    Nuestro <span class="text-primary">Blog</span>
+                </h1>
+                
+                <p class="text-lg md:text-xl text-gray-600 max-w-3xl leading-relaxed font-medium">
+                    Descubre artículos, guías y consejos expertos sobre cómo la inteligencia artificial está revolucionando el entrenamiento deportivo moderno. Aprende de profesionales del deporte y expertos en tecnología.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Blog Section -->
+    <section class="py-16 md:py-20 bg-gray-50">
+        <div class="container mx-auto px-8 md:px-16 max-w-7xl">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+                <div class="text-center">
+                    <div class="flex justify-center mb-4">
+                        <div class="bg-primary bg-opacity-15 rounded-2xl p-4">
+                            <i data-lucide="book-open" class="w-8 h-8 text-primary"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-bold text-secondary mb-3">Artículos Educativos</h3>
+                    <p class="text-gray-600 font-medium">Aprende sobre las últimas técnicas y tecnologías en entrenamiento deportivo con IA.</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="flex justify-center mb-4">
+                        <div class="bg-accent bg-opacity-20 rounded-2xl p-4">
+                            <i data-lucide="lightbulb" class="w-8 h-8 text-accent"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-bold text-secondary mb-3">Consejos Prácticos</h3>
+                    <p class="text-gray-600 font-medium">Descubre estrategias comprobadas para mejorar tu rendimiento deportivo rápidamente.</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="flex justify-center mb-4">
+                        <div class="bg-primary bg-opacity-10 rounded-2xl p-4">
+                            <i data-lucide="trending-up" class="w-8 h-8 text-primary"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-bold text-secondary mb-3">Casos de Éxito</h3>
+                    <p class="text-gray-600 font-medium">Explora historias reales de atletas que transformaron su carrera con SportsIA.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Blog Post -->
+    <section class="py-20 md:py-32">
+        <div class="container mx-auto px-8 md:px-16 max-w-7xl">
+            <div class="mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-2">Artículo Destacado</h2>
+                <div class="w-16 h-1 bg-primary rounded-full"></div>
+            </div>
+
+            <div class="card-soft bg-white p-8 md:p-12">
+                <div class="flex flex-col gap-6">
+                    <div>
+                        <div class="flex items-center gap-4 mb-6">
+                            <span class="inline-block bg-primary bg-opacity-10 text-primary px-4 py-2 rounded-full text-sm font-semibold">
+                                Destacado
+                            </span>
+                            <span class="text-gray-500 font-medium text-sm">
+                                <i data-lucide="calendar" class="w-4 h-4 inline-block mr-2"></i>
+                                17 de Noviembre, 2025
+                            </span>
+                        </div>
+                        
+                        <h3 class="text-3xl md:text-4xl font-bold text-secondary mb-6 leading-tight">
+                            Cómo la Inteligencia Artificial Revoluciona el Entrenamiento Deportivo Moderno
+                        </h3>
+                        
+                        <p class="text-lg text-gray-700 font-medium leading-relaxed mb-6">
+                            La inteligencia artificial está transformando fundamentalmente la forma en que los atletas entrenan y se preparan para la competencia. En este artículo completo, exploramos cómo la tecnología de análisis de rendimiento en tiempo real y la retroalimentación instantánea de técnica están democratizando el acceso a herramientas de entrenamiento profesional.
+                        </p>
+
+                        <div class="bg-gray-50 border-l-4 border-primary p-6 rounded-lg mb-6">
+                            <h4 class="font-bold text-secondary mb-4">Contenido del Artículo:</h4>
+                            <ul class="space-y-3 text-gray-700 font-medium">
+                                <li class="flex items-start gap-3">
+                                    <i data-lucide="check" class="w-5 h-5 text-primary flex-shrink-0 mt-0.5"></i>
+                                    <span>Cómo la IA utiliza visión por computadora para rastrear movimientos biomecánicos con precisión</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i data-lucide="check" class="w-5 h-5 text-primary flex-shrink-0 mt-0.5"></i>
+                                    <span>Detección de defectos técnicos invisibles al ojo humano mediante machine learning avanzado</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i data-lucide="check" class="w-5 h-5 text-primary flex-shrink-0 mt-0.5"></i>
+                                    <span>Generación de planes de mejora personalizados basados en datos científicos</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i data-lucide="check" class="w-5 h-5 text-primary flex-shrink-0 mt-0.5"></i>
+                                    <span>Beneficios comprobados: 40% de mejora técnica en 4 semanas y 35% más victorias</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i data-lucide="check" class="w-5 h-5 text-primary flex-shrink-0 mt-0.5"></i>
+                                    <span>Aplicaciones en tenis, fútbol, natación y otros deportes competitivos</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i data-lucide="check" class="w-5 h-5 text-primary flex-shrink-0 mt-0.5"></i>
+                                    <span>Cómo la IA democratiza la excelencia atlética haciéndola accesible y asequible</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i data-lucide="check" class="w-5 h-5 text-primary flex-shrink-0 mt-0.5"></i>
+                                    <span>El futuro: realidad aumentada, predicción de lesiones y análisis predictivo</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <p class="text-gray-600 font-medium leading-relaxed mb-8">
+                            Descubre en detalle cómo la inteligencia artificial está transformando cada aspecto del entrenamiento deportivo, desde la captura de movimiento hasta la generación de retroalimentación personalizada. Aprende qué hace que esta tecnología sea tan revolucionaria y cómo puede beneficiar tu carrera atlética.
+                        </p>
+
+                        <a href="https://test-acc-12349.github.io/ai-for-sports-coaching-2025-11-17-m3o0u/blog/c-mo-la-inteligencia-artificial-revoluciona-el-ent.html" class="btn-primary text-lg inline-block">
+                            Leer Artículo Completo
+                            <i data-lucide="arrow-right" class="w-5 h-5 inline-block ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Posts Grid -->
+    <section class="py-20 md:py-32 bg-gray-50">
+        <div class="container mx-auto px-8 md:px-16 max-w-7xl">
+            <div class="mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-2">Más Artículos</h2>
+                <div class="w-16 h-1 bg-primary rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+                <!-- Empty Blog Post Placeholder 1 -->
+                <div class="card-soft bg-white p-8 md:p-10 flex flex-col">
+                    <div class="h-48 bg-gradient-to-br from-primary to-accent bg-opacity-10 rounded-lg mb-6 flex items-center justify-center">
+                        <i data-lucide="image" class="w-12 h-12 text-gray-300"></i>
+                    </div>
+                    <div class="flex-grow">
+                        <div class="inline-block bg-primary bg-opacity-10 text-primary px-3 py-1 rounded-full text-xs font-semibold mb-4">
+                            Próximamente
+                        </div>
+                        <h3 class="text-xl font-bold text-secondary mb-3 leading-tight">
+                            Artículo Próximo
+                        </h3>
+                        <p class="text-gray-600 font-medium mb-4">
+                            Estamos preparando contenido exclusivo sobre técnicas avanzadas de entrenamiento con IA.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-gray-200">
+                        <span class="text-gray-400 font-medium text-sm">Disponible pronto</span>
+                    </div>
+                </div>
+
+                <!-- Empty Blog Post Placeholder 2 -->
+                <div class="card-soft bg-white p-8 md:p-10 flex flex-col">
+                    <div class="h-48 bg-gradient-to-br from-accent to-primary bg-opacity-10 rounded-lg mb-6 flex items-center justify-center">
+                        <i data-lucide="image" class="w-12 h-12 text-gray-300"></i>
+                    </div>
+                    <div class="flex-grow">
+                        <div class="inline-block bg-accent bg-opacity-20 text-accent px-3 py-1 rounded-full text-xs font-semibold mb-4">
+                            Próximamente
+                        </div>
+                        <h3 class="text-xl font-bold text-secondary mb-3 leading-tight">
+                            Guía de Implementación
+                        </h3>
+                        <p class="text-gray-600 font-medium mb-4">
+                            Descubre cómo integrar análisis de IA en tu rutina de entrenamiento actual.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-gray-200">
+                        <span class="text-gray-400 font-medium text-sm">Disponible pronto</span>
+                    </div>
+                </div>
+
+                <!-- Empty Blog Post Placeholder 3 -->
+                <div class="card-soft bg-white p-8 md:p-10 flex flex-col">
+                    <div class="h-48 bg-gradient-to-br from-primary to-accent bg-opacity-10 rounded-lg mb-6 flex items-center justify-center">
+                        <i data-lucide="image" class="w-12 h-12 text-gray-300"></i>
+                    </div>
+                    <div class="flex-grow">
+                        <div class="inline-block bg-primary bg-opacity-10 text-primary px-3 py-1 rounded-full text-xs font-semibold mb-4">
+                            Próximamente
+                        </div>
+                        <h3 class="text-xl font-bold text-secondary mb-3 leading-tight">
+                            Casos de Éxito
+                        </h3>
+                        <p class="text-gray-600 font-medium mb-4">
+                            Historias inspiradoras de atletas que transformaron su carrera con tecnología de IA.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-gray-200">
+                        <span class="text-gray-400 font-medium text-sm">Disponible pronto</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-16">
+                <p class="text-gray-600 font-medium mb-6">
+                    Estamos constantemente publicando nuevos artículos. Suscríbete para recibir las últimas actualizaciones.
+                </p>
+                <a href="https://sc.com" class="btn-primary text-lg">
+                    Suscribirse a Actualizaciones
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 md:py-32 bg-primary relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-0 right-0 w-96 h-96 bg-accent rounded-full blur-3xl"></div>
+            <div class="absolute bottom-0 left-0 w-96 h-96 bg-yellow-300 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div class="container mx-auto px-8 md:px-16 max-w-7xl relative z-10">
+            <div class="text-center">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 tracking-tight">
+                    ¿Listo para Transformar tu Rendimiento?
+                </h2>
+                
+                <p class="text-lg md:text-xl text-white text-opacity-90 max-w-2xl mx-auto mb-10 font-medium leading-relaxed">
+                    Únete a miles de atletas que ya están mejorando su técnica y ganando más juegos con SportsIA. Comienza tu prueba gratuita hoy mismo.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="https://sc.com" class="btn-secondary text-lg font-semibold">
+                        Prueba Gratis por 30 Días
+                    </a>
+                    <a href="https://test-acc-12349.github.io/ai-for-sports-coaching-2025-11-17-m3o0u" class="border-2 border-white text-white font-semibold rounded-full px-8 py-3 hover:bg-white hover:text-primary transition-all duration-300 transform hover:scale-105 inline-block text-center">
+                        Volver al Inicio
+                    </a>
+                </div>
+
+                <p class="text-white text-opacity-75 font-medium mt-8">
+                    Sin tarjeta de crédito requerida. Acceso completo a todas las características.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-secondary text-white py-16 md:py-20">
+        <div class="container mx-auto px-8 md:px-16 max-w-7xl">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-8 mb-12">
+                <!-- Column 1 - Brand -->
+                <div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="bg-primary rounded-full p-2">
+                            <i data-lucide="zap" class="w-5 h-5 text-white"></i>
+                        </div>
+                        <span class="text-xl font-bold">SportsIA</span>
+                    </div>
+                    <p class="text-gray-400 font-medium leading-relaxed mb-6">
+                        Transformando el entrenamiento deportivo con inteligencia artificial de última generación.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="bg-primary bg-opacity-20 hover:bg-opacity-30 rounded-full p-3 transition-all duration-300 transform hover:scale-110">
+                            <i class="fab fa-facebook-f w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="bg-primary bg-opacity-20 hover:bg-opacity-30 rounded-full p-3 transition-all duration-300 transform hover:scale-110">
+                            <i class="fab fa-twitter w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="bg-primary bg-opacity-20 hover:bg-opacity-30 rounded-full p-3 transition-all duration-300 transform hover:scale-110">
+                            <i class="fab fa-instagram w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="bg-primary bg-opacity-20 hover:bg-opacity-30 rounded-full p-3 transition-all duration-300 transform hover:scale-110">
+                            <i class="fab fa-linkedin-in w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Column 2 - Product -->
+                <div>
+                    <h3 class="font-bold text-lg mb-6">Producto</h3>
+                    <ul class="space-y-3">
+                        <li><a href="https://test-acc-12349.github.io/ai-for-sports-coaching-2025-11-17-m3o0u#features" class="text-gray-400 hover:text-primary transition-colors duration-300 font-medium">Características</a></li>
+                        <li><a href="https://test-acc-12349.github.io/ai-for-sports-coaching-2025-11-17-m3o0u#benefits" class="text-gray-400 hover:text-primary transition-colors duration-300 font-medium">Beneficios</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors duration-300 font-medium">Planes de Precios</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors duration-300 font-medium">Seguridad</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3 - Company -->
+                <div>
+                    <h3 class="font-bold text-lg mb-6">Empresa</h3>
+                    <ul class="space-y-3">
+                        <li><a href="https://test-acc-12349.github.io/ai-for-sports-coaching-2025-11-17-m3o0u#about" class="text-gray-400 hover:text-primary transition-colors duration-300 font-medium">Sobre Nosotros</a></li>
+                        <li><a href="blog.html" class="text-gray-400 hover:text-primary transition-colors duration-300 font-medium">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors duration-300 font-medium">Carreras</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors duration-300 font-medium">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4 - Legal -->
+                <div>
+                    <h3 class="font-bold text-lg mb-6">Legal</h3>
+                    <ul class="space-y-3">
+                        <li><a href="privacy.html" class="text-gray-400 hover:text-primary transition-colors duration-300 font-medium">Política de Privacidad</a></li>
+                        <li><a href="terms.html" class="text-gray-400 hover:text-primary transition-colors duration-300 font-medium">Términos de Servicio</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors duration-300 font-medium">Política de Cookies</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors duration-300 font-medium">Aviso Legal</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p class="text-gray-400 font-medium">
+                        &copy; 2025 SportsIA. Todos los derechos reservados.
+                    </p>
+                    <p class="text-gray-400 font-medium">
+                        Contacto: <a href="mailto:admin@sc.com" class="text-primary hover:underline">admin@sc.com</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth Scroll for Anchor Links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    if (href !== '#' && href.length > 1) {
+                        e.preventDefault();
+                        const target = document.querySelector(href);
+                        if (target) {
+                            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
+                    }
+                });
+            });
+        });
+
+        // Initialize Lucide Icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>
