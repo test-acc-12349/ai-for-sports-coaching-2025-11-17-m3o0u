@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="IA para Entrenamiento Deportivo - Análisis de rendimiento en tiempo real y retroalimentación instantánea de técnica. Mejora tu técnica más rápido, gana más juegos y entrena de manera inteligente.">
+    <meta name="keywords" content="IA deportiva, entrenamiento deportivo, análisis de rendimiento, retroalimentación de técnica">
+    <meta name="author" content="AI Sports Coaching">
+    <meta property="og:title" content="IA Para Entrenamiento Deportivo - Análisis de Rendimiento en Tiempo Real">
+    <meta property="og:description" content="Mejora tu técnica más rápido con análisis de rendimiento en tiempo real y retroalimentación instantánea.">
+    <meta property="og:type" content="website">
+    <title>IA Para Entrenamiento Deportivo | Análisis de Rendimiento en Tiempo Real</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        .text-primary {
+            color: #FF5A5F;
+        }
+        
+        .bg-primary {
+            background-color: #FF5A5F;
+        }
+        
+        .text-secondary {
+            color: #1A1A1A;
+        }
+        
+        .bg-secondary {
+            background-color: #1A1A1A;
+        }
+        
+        .text-accent {
+            color: #FFD166;
+        }
+        
+        .bg-accent {
+            background-color: #FFD166;
+        }
+        
+        .hover-lift {
+            transition: all 0.3s ease-out;
+        }
+        
+        .hover-lift:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 40px rgba(255, 90, 95, 0.15);
+        }
+        
+        .btn-primary {
+            background-color: #FF5A5F;
+            color: white;
+            border-radius: 9999px;
+            padding: 0.75rem 2rem;
+            font-weight: 600;
+            transition: all 0.3s ease-out;
+            display: inline-block;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+        }
+        
+        .btn-primary:hover {
+            background-color: #E74C51;
+            transform: scale(1.05);
+            box-shadow: 0 10px 40px rgba(255, 90, 95, 0.25);
+        }
+        
+        .btn-secondary {
+            background-color: #FFD166;
+            color: #1A1A1A;
+            border-radius: 9999px;
+            padding: 0.75rem 2rem;
+            font-weight: 600;
+            transition: all 0.3s ease-out;
+            display: inline-block;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+        }
+        
+        .btn-secondary:hover {
+            background-color: #F5C847;
+            transform: scale(1.05);
+            box-shadow: 0 10px 40px rgba(255, 209, 102, 0.25);
+        }
+        
+        .card-rounded {
+            border-radius: 1rem;
+        }
+        
+        .card-soft {
+            border-radius: 1rem;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease-out;
+        }
+        
+        .card-soft:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+        }
+        
+        .faq-question {
+            cursor: pointer;
+            transition: all 0.3s ease-out;
+        }
+        
+        .faq-question:hover {
+            color: #FF5A5F;
+        }
+        
+        .faq-icon {
+            transition: transform 0.3s ease-out;
+        }
+        
+        .faq-answer {
+            transition: all 0.3s ease-out;
+            max-height: 500px;
+        }
+        
+        .faq-answer.hidden {
+            max-height: 0;
+            overflow: hidden;
+        }
+        
+        .gradient-hero {
+            background: linear-gradient(135deg, rgba(255, 90, 95, 0.1) 0%, rgba(255, 209, 102, 0.1) 100%);
+        }
+        
+        .testimonial-star {
+            color: #FFD166;
+        }
+        
+        .mobile-menu {
+            transition: all 0.3s ease-out;
+        }
+        
+        .header-sticky {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-white text-secondary">
+    <!-- Header -->
+    <header class="header-sticky">
+        <nav class="container mx-auto px-8 md:px-16 py-6 flex items-center justify-between max-w-7xl">
+            <div class="flex items-center justify-between w-full">
+                <a href="https://test-acc-12349.github.io/ai-for-sports-coaching-2025-11-17-m3o0u" class="flex items-center gap-3">
+                    <div class="bg-primary rounded-full p-2">
+                        <i data-lucide="zap" class="w-6 h-6 text-white"></i>
+                    </div>
+                    <span class="text-2xl font-bold text-secondary">SportsIA</span>
+                </a>
+                <a href="https://test-acc-12349.github.io/ai-for-sports-coaching-2025-11-17-m3o0u" class="text-secondary font-medium hover:text-primary transition-colors duration-300 flex items-center gap-2">
+                    ← Atrás
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Blog Content -->
+    <main class="max-w-4xl mx-auto px-4 py-12">
+        <article class="prose prose-lg max-w-none">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6 text-gray-900">Cómo la Inteligencia Artificial Revoluciona el Entrenamiento Deportivo Moderno</h1>
+            
+            <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=1200&h=675&fit=crop&q=80" alt="Tecnología de inteligencia artificial en análisis deportivo con pantallas de datos y métricas de rendimiento" class="w-full rounded-lg shadow-lg mb-8">
+            
+            <p class="mb-4 leading-relaxed text-gray-700">La inteligencia artificial ha transformado prácticamente todos los aspectos de nuestras vidas, y el mundo del deporte no es la excepción. En los últimos años, hemos presenciado una revolución silenciosa en la forma en que los atletas entrenan, se preparan y optimizan su rendimiento. La tecnología de IA para entrenamiento deportivo no es solo una tendencia pasajera, sino una transformación fundamental en cómo entendemos y mejoramos la excelencia atlética. Ya sea que seas un atleta profesional, un entrenador experimentado o simplemente alguien apasionado por mejorar tu rendimiento deportivo, esta guía te mostrará cómo la IA está cambiando el juego.</p>
+            
+            <p class="mb-6 leading-relaxed text-gray-700">El análisis de rendimiento en tiempo real y la retroalimentación instantánea de técnica son ahora accesibles para atletas de todos los niveles. Esto significa que ya no necesitas ser un profesional con acceso a entrenadores de clase mundial para obtener información de calidad profesional sobre tu desempeño. La democratización de la tecnología deportiva es uno de los cambios más significativos en la historia del deporte moderno.</p>
+            
+            <h2 class="text-3xl font-semibold mt-8 mb-4 text-gray-900">¿Qué es el Análisis de Rendimiento en Tiempo Real?</h2>
+            
+            <p class="mb-4 leading-relaxed text-gray-700">El análisis de rendimiento en tiempo real es la capacidad de procesar datos de tus movimientos deportivos de manera instantánea y proporcionar retroalimentación inmediata. Utilizando tecnología de visión por computadora, sensores avanzados y algoritmos de aprendizaje automático, los sistemas de IA pueden rastrear cada aspecto de tu técnica deportiva. Esto incluye la velocidad de tus movimientos, la precisión de tu posicionamiento, la potencia generada y la consistencia de tu ejecución.</p>
+            
+            <p class="mb-4 leading-relaxed text-gray-700">Imagina tener a un entrenador de clase mundial observando cada movimiento que haces, analizando los datos biomecánicos complejos, comparándolos con atletas profesionales y proporcionándote retroalimentación detallada, todo en cuestión de segundos. Esto es exactamente lo que ofrece la tecnología de IA moderna en el entrenamiento deportivo. Los sistemas pueden detectar problemas de técnica que el ojo humano podría pasar por alto, permitiéndote corregir problemas antes de que se conviertan en hábitos que sean difíciles de cambiar.</p>
+            
+            <p class="mb-6 leading-relaxed text-gray-700">La capacidad de acceder a este nivel de análisis de forma inmediata es revolucionaria. Antes, los atletas tenían que esperar a que un entrenador revisara videos grabados, analizara datos y luego proporcionara retroalimentación, un proceso que podía tomar horas o incluso días. Con la IA, la retroalimentación es instantánea, permitiéndote hacer ajustes en el momento y optimizar cada sesión de entrenamiento.</p>
+            
+            <h2 class="text-3xl font-semibold mt-8 mb-4 text-gray-900">Retroalimentación Instantánea de Técnica: El Cambio del Juego</h2>
+            
+            <h3 class="text-2xl font-medium mt-6 mb-3 text-gray-800">Correcciones Basadas en Video y Biomecánica</h3>
+            
+            <p class="mb-4 leading-relaxed text-gray-700">Uno de los aspectos más poderosos de la IA en el entrenamiento deportivo es la capacidad de proporcionar correcciones detalladas basadas en análisis biomecánico profundo. La tecnología puede identificar desalineaciones sutiles en tu cuerpo, ineficiencias en tu movimiento y oportunidades para mejorar la potencia y la precisión. Por ejemplo, en tenis, la IA puede analizar el ángulo de tu raqueta en el momento del impacto, la velocidad de tu brazo, la rotación de tu cadera y la transferencia de peso, proporcionando retroalimentación específica sobre cómo mejorar cada uno de estos elementos.</p>
+            
+            <p class="mb-6 leading-relaxed text-gray-700">Esta retroalimentación no es genérica. Los sistemas de IA más avanzados personalizan sus recomendaciones basándose en tu estilo único, tus fortalezas y tus áreas de mejora específicas. Esto significa que dos atletas que practican el mismo deporte pueden recibir retroalimentación completamente diferente, adaptada a sus necesidades individuales.</p>
+            
+            <h3 class="text-2xl font-medium mt-6 mb-3 text-gray-800">Planes de Mejora Personalizados</h3>
+            
+            <p class="mb-4 leading-relaxed text-gray-700">Basándose en el análisis continuo de tu rendimiento, los sistemas de IA pueden crear planes de mejora personalizados que evolucionan con el tiempo. Estos planes no son estáticos, sino dinámicos, ajustándose a tu progreso y adaptándose a nuevos desafíos a medida que mejoras. Si tu técnica de servicio mejora pero tu juego de fondo necesita trabajo, el sistema detectará esto automáticamente y ajustará tu plan de entrenamiento.</p>
+            
+            <p class="mb-6 leading-relaxed text-gray-700">Además, estos planes están diseñados para ser eficientes. En lugar de pasar horas en el entrenamiento sin dirección clara, puedes enfocarte en los elementos específicos que harán la mayor diferencia en tu rendimiento. Esto significa entrenamientos más cortos pero más efectivos, permitiéndote alcanzar tus objetivos más rápido mientras minimizas el riesgo de lesiones por sobreentrenamiento.</p>
+            
+            <h2 class="text-3xl font-semibold mt-8 mb-4 text-gray-900">Aplicaciones Prácticas de la IA Deportiva en Diferentes Deportes</h2>
+            
+            <h3 class="text-2xl font-medium mt-6 mb-3 text-gray-800">Tenis: Análisis de Servicio y Movimiento</h3>
+            
+            <p class="mb-4 leading-relaxed text-gray-700">En el tenis, la IA ha revolucionado la forma en que los atletas analizan su juego. Los sistemas pueden rastrear la velocidad del servicio, el efecto de la pelota, la precisión de la colocación y la consistencia de la ejecución. Tenistas profesionales ahora utilizan esta tecnología para identificar patrones en sus servicios ganadores y analizar las debilidades de sus oponentes. La IA puede mostrar exactamente dónde estás sirviendo en la cancha, qué tan rápido va tu servicio y cómo se compara con otros jugadores de tu nivel.</p>
+            
+            <h3 class="text-2xl font-medium mt-6 mb-3 text-gray-800">Fútbol: Seguimiento de Movimiento y Posicionamiento</h3>
+            
+            <p class="mb-4 leading-relaxed text-gray-700">Los equipos de fútbol profesional utilizan IA para rastrear el movimiento de los jugadores, analizar el posicionamiento defensivo y optimizar el movimiento ofensivo. La tecnología puede identificar espacios en la defensa, sugerir pases más efectivos y analizar la eficiencia del movimiento. Los entrenadores pueden usar estos datos para crear estrategias más efectivas y para identificar a jugadores jóvenes con potencial.</p>
+            
+            <h3 class="text-2xl font-medium mt-6 mb-3 text-gray-800">Natación: Análisis de Técnica y Eficiencia</h3>
+            
+            <p class="mb-6 leading-relaxed text-gray-700">En la natación, la IA analiza la técnica de brazada, la posición del cuerpo en el agua, la velocidad de nado y la eficiencia energética. Los nadadores pueden recibir retroalimentación sobre cómo mejorar su posición corporal, reducir la resistencia del agua y maximizar la potencia de sus brazadas. Esto es especialmente valioso porque la técnica en la natación es difícil de observar a simple vista, pero tiene un impacto enorme en el rendimiento.</p>
+            
+            <h2 class="text-3xl font-semibold mt-8 mb-4 text-gray-900">Beneficios Medibles: Números que Hablan</h2>
+            
+            <p class="mb-4 leading-relaxed text-gray-700">Los beneficios de utilizar IA para el entrenamiento deportivo no son solo teóricos, sino que están respaldados por datos concretos. Los atletas que utilizan sistemas de análisis de IA reportan mejoras significativas en su rendimiento en un período de tiempo relativamente corto.</p>
+            
+            <ul class="list-disc list-inside mb-6 space-y-3">
+                <li class="text-gray-700"><span class="font-semibold">Mejora de Técnica del 40%:</span> Los atletas reportan mejoras de técnica medibles en hasta el 40% en las primeras 4 semanas de uso consistente del sistema.</li>
+                <li class="text-gray-700"><span class="font-semibold">Aumento de Victorias del 35%:</span> Los entrenadores reportan que sus atletas ganan un 35% más de juegos después de implementar análisis de IA en su entrenamiento.</li>
+                <li class="text-gray-700"><span class="font-semibold">Reducción de Lesiones:</span> Al optimizar la técnica y reducir movimientos ineficientes, los atletas experimentan menos lesiones relacionadas con el entrenamiento.</li>
+                <li class="text-gray-700"><span class="font-semibold">Entrenamientos Más Eficientes:</span> Los atletas logran más en menos tiempo, con entrenamientos más enfocados y dirigidos.</li>
+                <li class="text-gray-700"><span class="font-semibold">Progreso Medible:</span> El seguimiento continuo del progreso proporciona motivación y claridad sobre qué está funcionando y qué necesita ajustes.</li>
+            </ul>
+            
+            <h2 class="text-3xl font-semibold mt-8 mb-4 text-gray-900">Cómo Implementar la IA en tu Rutina de Entrenamiento</h2>
+            
+            <h3 class="text-2xl font-medium mt-6 mb-3 text-gray-800">Paso 1: Elegir la Plataforma Correcta</h3>
+            
+            <p class="mb-4 leading-relaxed text-gray-700">El primer paso es seleccionar una plataforma de análisis de IA que sea adecuada para tu deporte específico. Diferentes deportes requieren diferentes tipos de análisis, por lo que es importante elegir una plataforma que esté optimizada para tu disciplina. Busca plataformas que ofrezcan análisis en tiempo real, retroalimentación personalizada y la capacidad de rastrear el progreso a lo largo del tiempo.</p>
+            
+            <h3 class="text-2xl font-medium mt-6 mb-3 text-gray-800">Paso 2: Configurar tu Perfil de Atleta</h3>
+            
+            <p class="mb-4 leading-relaxed text-gray-700">Una vez que hayas elegido una plataforma, necesitarás crear tu perfil de atleta. Esto incluye información sobre tu deporte, tu nivel de experiencia, tus objetivos específicos y cualquier área en la que sientas que necesitas mejorar. Cuanta más información proporciones, mejor podrá personalizar la IA tus análisis y recomendaciones.</p>
+            
+            <h3 class="text-2xl font-medium mt-6 mb-3 text-gray-800">Paso 3: Registrar tus Sesiones de Entrenamiento</h3>
+            
+            <p class="mb-4 leading-relaxed text-gray-700">La mayoría de las plataformas de IA utilizan video o datos de sensores para analizar tu rendimiento. Necesitarás registrar tus sesiones de entrenamiento regularmente, permitiendo que el sistema analice tu técnica y proporcione retroalimentación. La consistencia es clave aquí, ya que el sistema necesita datos continuos para identificar patrones y proporcionar recomendaciones significativas.</p>
+            
+            <h3 class="text-2xl font-medium mt-6 mb-3 text-gray-800">Paso 4: Revisar y Actuar sobre la Retroalimentación</h3>
+            
+            <p class="mb-6 leading-relaxed text-gray-700">Una vez que el sistema proporciona retroalimentación, es crucial que actúes sobre ella. Revisa los análisis detallados, entiende las recomendaciones y luego implementa los cambios sugeridos en tu próxima sesión de entrenamiento. El verdadero poder de la IA surge cuando combinas el análisis con la acción deliberada.</p>
+            
+            <h2 class="text-3xl font-semibold mt-8 mb-4 text-gray-900">El Futuro del Entrenamiento Deportivo</h2>
+            
+            <p class="mb-4 leading-relaxed text-gray-700">La tecnología de IA en el entrenamiento deportivo está evolucionando rápidamente. En el futuro, podemos esperar sistemas aún más sofisticados que combinen análisis de video, datos de sensores portátiles, análisis genético y predicción de lesiones. Imagina un sistema que no solo te diga cómo mejorar tu técnica, sino que también prediga qué lesiones podrías sufrir basándose en tus patrones de entrenamiento y tu biomecánica, permitiéndote tomar medidas preventivas.</p>
+            
+            <p class="mb-4 leading-relaxed text-gray-700">La realidad aumentada también jugará un papel importante, permitiendo que los atletas vean superposiciones de datos en tiempo real durante el entrenamiento. Imagina ver líneas de movimiento óptimo superpuestas en tu visión mientras practicas, o recibir retroalimentación de audio en tiempo real que te guíe a través de correcciones de técnica.</p>
+            
+            <p class="mb-6 leading-relaxed text-gray-700">Además, la IA se volverá más accesible. A medida que la tecnología se vuelve más común y menos costosa, más atletas de todos los niveles tendrán acceso a herramientas de análisis que antes solo estaban disponibles para profesionales. Esto nivelará el campo de juego, permitiendo que atletas dedicados en cualquier parte del mundo compitan en igualdad de condiciones con sus contrapartes en centros de entrenamiento de élite.</p>
+            
+            <h2 class="text-3xl font-semibold mt-8 mb-4 text-gray-900">Conclusión: Tu Viaje hacia la Excelencia Deportiva</h2>
+            
+            <p class="mb-4 leading-relaxed text-gray-700">La inteligencia artificial ha democratizado el acceso a la tecnología de análisis deportivo de clase mundial. Ya no necesitas ser un atleta profesional o tener acceso a entrenadores de élite para obtener información detallada sobre tu rendimiento y orientación sobre cómo mejorar. Los sistemas de análisis de IA en tiempo real y la retroalimentación instantánea de técnica están transformando la forma en que los atletas entrenan, evolucionan y alcanzan sus objetivos.</p>
+            
+            <p class="mb-4 leading-relaxed text-gray-700">Si eres serio acerca de mejorar tu rendimiento deportivo, el momento de actuar es ahora. La tecnología está disponible, es asequible y ha demostrado ser efectiva. Ya sea que quieras mejorar tu técnica de servicio en tenis, tu posicionamiento en fútbol, tu técnica de brazada en natación o cualquier otro aspecto de tu deporte, la IA puede ayudarte a alcanzar tus objetivos más rápido que nunca.</p>
+            
+            <p class="mb-6 leading-relaxed text-gray-700">El futuro del entrenamiento deportivo es inteligente, personalizado y orientado por datos. ¿Estás listo para formar parte de esta revolución? Tu mejor versión atlética te está esperando, y con la ayuda de la inteligencia artificial, está más cerca de lo que jamás pensaste que sería posible.</p>
+            
+            <div class="bg-accent bg-opacity-10 rounded-lg p-8 mt-12 mb-8">
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">¿Listo para Comenzar tu Transformación?</h3>
+                <p class="text-gray-700 mb-6 leading-relaxed">Descubre cómo SportsIA puede revolucionar tu entrenamiento con análisis en tiempo real y retroalimentación personalizada. Únete a miles de atletas que ya están mejorando su rendimiento.</p>
+                <a href="https://sc.com" class="btn-primary inline-block">Comienza tu Prueba Gratuita Hoy</a>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-secondary text-white py-16 md:py-20">
+        <div class="container mx-auto px-8 md:px-16 max-w-7xl">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-8 mb-12">
+                <!-- Column 1 - Brand -->
+                <div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="bg-primary rounded-full p-2">
+                            <i data-lucide="zap" class="w-5 h-5 text-white"></i>
+                        </div>
+                        <span class="text-xl font-bold">SportsIA</span>
+                    </div>
+                    <p class="text-gray-400 font-medium leading-relaxed mb-6">
+                        Transformando el entrenamiento deportivo con inteligencia artificial de última generación.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="bg-primary bg-opacity-20 hover:bg-opacity-30 rounded-full p-3 transition-all duration-300 transform hover:scale-110">
+                            <i class="fab fa-facebook-f w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="bg-primary bg-opacity-20 hover:bg-opacity-30 rounded-full p-3 transition-all duration-300 transform hover:scale-110">
+                            <i class="fab fa-twitter w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="bg-primary bg-opacity-20 hover:bg-opacity-30 rounded-full p-3 transition-all duration-300 transform hover:scale-110">
+                            <i class="fab fa-instagram w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="bg-primary bg-opacity-20 hover:bg-opacity-30 rounded-full p-3 transition-all duration-300 transform hover:scale-110">
+                            <i class="fab fa-linkedin-in w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Column 2 - Product -->
+                <div>
+                    <h3 class="font-bold text-lg mb-6">Producto</h3>
+                    <ul class="space-y-3">
+                        <li><a href="https://test-acc-12349.github.io/ai-for-sports-coaching-2025-11-17-m3o0u#features" class="text-gray-400 hover:text-primary transition-colors duration-300 font-medium">Características</a></li>
+                        <li><a href="https://test-acc-12349.github.io/ai-for-sports-coaching-2025-11-17-m3o0u#benefits" class="text-gray-400 hover:text-primary transition-colors duration-300 font-medium">Beneficios</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors duration-300 font-medium">Planes de Precios</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors duration-300 font-medium">Seguridad</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3 - Company -->
+                <div>
+                    <h3 class="font-bold text-lg mb-6">Empresa</h3>
+                    <ul class="space-y-3">
+                        <li><a href="https://test-acc-12349.github.io/ai-for-sports-coaching-2025-11-17-m3o0u#about" class="text-gray-400 hover:text-primary transition-colors duration-300 font-medium">Sobre Nosotros</a></li>
+                        <li><a href="blog.html" class="text-gray-400 hover:text-primary transition-colors duration-300 font-medium">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors duration-300 font-medium">Carreras</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors duration-300 font-medium">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4 - Legal -->
+                <div>
+                    <h3 class="font-bold text-lg mb-6">Legal</h3>
+                    <ul class="space-y-3">
+                        <li><a href="privacy.html" class="text-gray-400 hover:text-primary transition-colors duration-300 font-medium">Política de Privacidad</a></li>
+                        <li><a href="terms.html" class="text-gray-400 hover:text-primary transition-colors duration-300 font-medium">Términos de Servicio</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors duration-300 font-medium">Política de Cookies</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors duration-300 font-medium">Aviso Legal</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p class="text-gray-400 font-medium">
+                        &copy; 2025 SportsIA. Todos los derechos reservados.
+                    </p>
+                    <p class="text-gray-400 font-medium">
+                        Contacto: <a href="mailto:admin@sc.com" class="text-primary hover:underline">admin@sc.com</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile Menu Toggle
+            const mobileMenuButton = document.querySelector('header nav .mobile-menu-button');
+            const mobileMenu = document.querySelector('header nav .mobile-menu');
+            
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                    const icon = mobileMenuButton.querySelector('i');
+                    if (icon) {
+                        icon.classList.toggle('fa-bars');
+                        icon.classList.toggle('fa-times');
+                    }
+                });
+
+                const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+                mobileMenuLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                        const icon = mobileMenuButton.querySelector('i');
+                        if (icon) {
+                            icon.classList.remove('fa-times');
+                            icon.classList.add('fa-bars');
+                        }
+                    });
+                });
+            }
+
+            // FAQ Accordion Toggle (if FAQ section exists)
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                if (question) {
+                    question.addEventListener('click', () => {
+                        const answer = item.querySelector('.faq-answer');
+                        const isOpen = !answer.classList.contains('hidden');
+                        
+                        // Close all other FAQ items
+                        faqItems.forEach(otherItem => {
+                            if (otherItem !== item) {
+                                otherItem.querySelector('.faq-answer')?.classList.add('hidden');
+                                otherItem.querySelector('.faq-icon')?.classList.remove('rotate-180');
+                            }
+                        });
+                        
+                        // Toggle current item
+                        answer?.classList.toggle('hidden');
+                        item.querySelector('.faq-icon')?.classList.toggle('rotate-180');
+                    });
+                }
+            });
+
+            // Smooth Scroll for Anchor Links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    if (href !== '#' && href.length > 1) {
+                        e.preventDefault();
+                        const target = document.querySelector(href);
+                        if (target) {
+                            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
+                    }
+                });
+            });
+        });
+
+        // Initialize Lucide Icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>
